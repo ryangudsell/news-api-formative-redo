@@ -1,0 +1,178 @@
+@media screen and (min-width: 0) {
+/* General Styles */
+* {padding: 0; margin: 0; box-sizing: border-box; list-style-type: none;}
+
+.text-align-right {text-align: right;}
+
+.mobile-hide {display: none;}
+
+/* Font Styles */
+h1, h2, h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 .big-text {font-size: 36px;}
+
+h2, h3 {font-size: 20px;}
+
+p {
+    font-size: 16px; 
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+}
+
+p .bold {font-weight: 600;}
+
+p.author-name {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+/* Structure */
+body {
+    width: 100vw;
+
+    background-color: #d8d8d8;
+}
+
+header, footer {background-color: #eeeeee;}
+header #header, footer #footer {margin: 0 auto; padding: 10px 5px;}
+
+#header {display: flex; justify-content: space-between; align-items: center;}
+#header div {padding: 0 20px;}
+#header div a {margin-left: 10px; color: grey; font-style: italic;}
+#header div a p {display: inline-block;}
+
+#home, #about, #article-details {
+    position: relative;
+    margin: 0 auto;
+    padding: 5px 10px;
+
+    background-color: #eeeeee;
+    border-top: 4px solid #e2c7fd;
+    
+    min-height: 90vh;
+}
+
+#about {
+    padding: 10px 20px;
+}
+
+.greeting-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-container {
+    grid-row: 0/2;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 4px solid rgb(14, 123, 194);
+    text-align: center;
+}
+
+.filter-settings {display: inline-block; margin: 0 10px;}
+.filter-settings p {display: inline-block;}
+.filter-settings label {margin-right: 2px;}
+.filter-settings input {width: 130px;}
+
+hr {border: none; border-top: 1px solid #cacaca;}
+
+.featured-articles {background-color: #d8d8d8;}
+
+.articles img, .articles div {display: inline-block;}
+.articles img {width: 100px!important;height: 100%;object-fit: cover;}
+.articles div {width: calc(100% - 100px);}
+.articles h2 {font-size: 16px;}
+.articles p {font-size: 12px;}
+
+.article-card {margin-bottom: 20px; cursor: pointer;}
+.article-card h2 {margin-bottom: 5px;}
+.article-card img {width: 100%;}
+.article-card div {padding: 0 5px;}
+
+#about .about-image img {rotate: 90deg; width: 50%!important; margin: 20px 25%;}
+
+#article-details {padding: 40px 10px 0;}
+#article-details button {position: absolute; top: 10px; left: 10px;}
+#article-details div img {width: 100%; margin: 20px 0;}
+#article-details div p {font-size: 18px;}
+
+} @media screen and (min-width:550px) {
+header #header, footer #footer {width: 90%;}
+#home, #about, #article-details {width: 90%;}
+
+#article-details div img {
+    width: 405px;
+
+    display: block;
+    margin: 20px auto;
+}
+
+} @media screen and (min-width:768px) {
+header #header, footer #footer {width: 85%;}
+#home, #about, #article-details {width: 85%;}
+
+.filter-container {margin-bottom: 40px;}
+
+.top-article-container {position: relative;}
+.top-article img {margin-left: 48%; width: 50%; margin-bottom: 20px;}
+.top-article div {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+
+    width: 65%;
+    height: auto;
+    padding: 5px;
+
+    background-color: #eeeeee;
+    border: 1px solid black;
+}
+
+.featured-articles-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.featured-articles {width: 30%;}
+
+#about .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+} @media screen and (min-width: 1024px) {
+/* Fonts */
+h1 .big-text {font-size: 40px;}
+h2 {font-size: 28px;}
+
+/* Structure */
+#about {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 200px auto;
+    grid-template-areas: "title image" "details image";
+}
+
+#about h1 {grid-area: title; margin-top: auto;}
+#about .about-image {grid-area: image;}
+#about .about-details {grid-area: details;}
+#about .about-details ul {margin-left: 20px;}
+#about .about-details ul li {list-style-type: disc; margin-top: 5px;}
+
+#article-details div img {width: 650px;}
+
+} @media screen and (min-width:1440px) {
+/* Fonts */
+h2 {font-size: 40px;}
+.top-article p {font-size: 24px;}
+
+/* Structure */
+.top-article div {top: 25%;}
+
+}
